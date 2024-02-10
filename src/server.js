@@ -124,6 +124,7 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
-app.listen(3005, () => {
-  console.log('Server started on port 3005');
+const PORT = process.env.PORT || 3005; // Default to 3000 if PORT is not defined
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
