@@ -1,0 +1,38 @@
+{
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 700
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "opacity": 0.5
+      },
+      "move": {
+        "speed": 1
+      },
+      "size": {
+        "value": 3
+      },
+      "opacity": {
+        "anim": {
+          "enable": true,
+          "speed": 1,
+          "opacity_min": 0.5
+        }
+      }
+    },
+    "interactivity": {
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        }
+      }
+    },
+    "retina_detect": true
+  }
+  
