@@ -2,8 +2,7 @@ import React, { useState,useEffect,useCallback ,Suspense} from 'react';
 import './App.css';
 import AboutView from './about';
 import Typewriter from "typewriter-effect";
-import RecipeReviewCard from "./work_card"
-import ContactForm from'./contact'
+
 
 import { Element } from 'react-scroll';
 

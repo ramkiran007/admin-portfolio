@@ -89,11 +89,6 @@ function authenticate(req, res, next) {
     next(); // Proceed to the next middleware
   });
 }
-
-
-router.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 router.get('/items', async (req, res) => {
     try {
       const items = await Portfolio.find();
