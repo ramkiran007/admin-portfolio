@@ -18,7 +18,7 @@ const cors = require('cors');
 const jwtSecret = process.env.JWT_SECRET;
 
 
-
+app.use(express.static(path.join(__dirname, 'build')));
 // Set up the session middleware
 app.use(session({
     secret: process.env.SESSION_SECRET,
