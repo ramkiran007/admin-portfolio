@@ -1,5 +1,5 @@
 const express = require('express');
-const User = require('../models/User');
+const User = require('./models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
@@ -7,8 +7,8 @@ const path = require('path');
 
 const session = require('express-session');
 const ObjectId = require('mongodb').ObjectId; // Add this line for ObjectId
-const Portfolio=require('../models/portfolio_model')
-const portfolioRoutes = require('../routes/portfolioRoutes'); // Adjust path as necessary
+const Portfolio=require('./models/portfolio_model')
+const portfolioRoutes = require('./routes/portfolioRoutes'); // Adjust path as necessary
 require('dotenv').config();
 
 
