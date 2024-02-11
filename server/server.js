@@ -33,8 +33,8 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 const corsOptions = {
-  origin: 'http://localhost:3000', // or use '*' to allow all origins
-
+  origin: ['https://ramkiranmeduri.vercel.app'], // or use '*' to allow all origins
+  methods:["POST","GET"],
   
   credentials: true, // to support cookies passing through CORS
 };
