@@ -32,14 +32,12 @@ app.use('/uploads', express.static(uploadDir));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
-const corsOptions = {
-  origin: ['https://ramkiranmeduri.vercel.app'], // or use '*' to allow all origins
-  methods:["POST","GET"],
-  
-  credentials: true, // to support cookies passing through CORS
-};
 
-app.use(cors());
+app.use(cors({
+  origin: ['https://ramkiranmeduri.vercel.app'], // or use '*' to allow all origins
+methods:["POST","GET"],
+
+credentials: true}));
 const mongourl =
 "mongodb+srv://cca-medurir2:Ramkiran888@cca-medurir2.kwaur2w.mongodb.net/cca-project-sprint2?retryWrites=true&w=majority";
 
