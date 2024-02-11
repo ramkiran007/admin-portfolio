@@ -34,7 +34,7 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 
 app.use(cors({
-  origin: ['https://ramkiranmeduri.vercel.app'], // or use '*' to allow all origins
+  origin: ['https://ramkiranmeduri.vercel.app/'], // or use '*' to allow all origins
 methods:["POST","GET"],
 
 credentials: true}));
