@@ -24,12 +24,13 @@ function NavbarComponent({ currentTab, setCurrentTab, portfolioDetails }) {
            <HomeIcon fontSize='small'/> Home
           </Linkss>
         </NavItem>
-        <NavItem>
+       {/* <NavItem>
           <NavLink tag={Link} to="/admin" onClick={() => setCurrentTab('admin')} style={{ fontWeight: 'bold', color: '#ff7700', fontFamily: 'Nunito' }}>
             Admin
           </NavLink>
   
   </NavItem>
+  */}
   
   <NavItem>
         <Linkss to="aboutSection" spy={true} smooth={true} duration={500} className="nav-link" style={{ fontWeight: 'bold', color: '#ff7700', fontFamily: 'Nunito' }}>
