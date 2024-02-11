@@ -574,16 +574,6 @@ section {
 
 
 
-.card {
-  color: var(--clr-neutral-100);
-  background-image: url('/Users/ramkiranmeduri/project2/admin-portfolio/public/adrien-olichon-RCAhiGJsUUE-unsplash.jpg');
-  background-size: cover;
-  padding: 10rem 0 0;
-  max-width: 85ch;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  transition: transform 500ms ease;
-}
 
 .card:hover,
 .card:focus-within {

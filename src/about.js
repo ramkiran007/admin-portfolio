@@ -11,11 +11,11 @@ import animationData5 from './Animation - 1705708670002.json'
 const LottieAnimation = React.lazy(() => import('./Constellation'));
 
 
-function AboutView({ portfolioDetails, image }) {
+function AboutView({ portfolioDetails }) {
   
   const [transitionClass, setTransitionClass] = useState('fade-enter');
   const location = useLocation();
-  const imageUrl = portfolioDetails.image ? `/uploads/${image}` : null;
+  const imageUrl = portfolioDetails.image ? portfolioDetails.image:null;
 
   const [currentEducation, setCurrentEducation] = useState(false);
   useEffect(() => {
@@ -104,6 +104,7 @@ Education
 )}
 </div>
 <div className="profile-section fadeInScaleUp">
+{console.log("about check"+portfolioDetails.image)}
         {portfolioDetails.image && (
             <img
                 className="profile-image shadow-effect"

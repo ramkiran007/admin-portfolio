@@ -54,6 +54,7 @@ function PortfolioManager() {
       const response = await fetch('/api/portfolio/items');
       if (response.ok) {
         const items = await response.json();
+        console.log('all items'+JSON.stringify(items[0]))
         
         // Initialize categorizedData with placeholders for the latest image and resume
         const categorizedData = {
@@ -69,6 +70,7 @@ function PortfolioManager() {
         let latestResumeDate = 0;
   
         items.forEach(item => {
+         
           // Populate projects, work experiences, and about sections
           if (item.type) {
             switch (item.type) {
@@ -84,6 +86,7 @@ function PortfolioManager() {
                 categorizedData.about.push(item);
                 break;
               default:
+                
                 console.warn(`Unhandled item type: ${item.type}`);
                 break;
             }
@@ -91,9 +94,13 @@ function PortfolioManager() {
   
           // Update the image and resume with the latest one based on updatedAt or createdAt timestamp
           if (item.image) {
+            
             const imageDate = new Date(item.updatedAt || item.createdAt).getTime();
+
             if (imageDate > latestImageDate) {
               categorizedData.image = item.image;
+             console.log('if catimage'+categorizedData.image.slice('/uploads'.length))
+
               latestImageDate = imageDate;
             }
           }
@@ -102,6 +109,7 @@ function PortfolioManager() {
             const resumeDate = new Date(item.updatedAt || item.createdAt).getTime();
             if (resumeDate > latestResumeDate) {
               categorizedData.resume = item.resume;
+              
               latestResumeDate = resumeDate;
             }
           }
@@ -123,6 +131,7 @@ function PortfolioManager() {
   // Inside AdminView component, adjust the file input change handler
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
+    
     if (!file) {
         console.log("No file selected.");
         return;
@@ -146,13 +155,14 @@ function PortfolioManager() {
             // headers not needed, browser will set Content-Type to multipart/form-data with boundary
 
         });
-       
+        console.log('imagepath response'+JSON.stringify(response))
 
         if (response.ok) {
             const result = await response.json();
             console.log('Upload successful', result);
             // Optionally update state with server response, e.g., storing the file's path as returned from the server
             // This step is optional and depends on whether you need to reference the server-stored image immediately
+            
             setPortfolioDetails(prev => ({ ...prev, image: `/uploads/${result.imagePath}` }));
             URL.revokeObjectURL(imageUrl);
         } else {
@@ -161,7 +171,7 @@ function PortfolioManager() {
     } catch (error) {
         console.error('Error uploading file:', error);
     }
-};
+}
 
   
   
@@ -274,7 +284,7 @@ const handleResumeUpload = async (e) => {
           <Routes>
             <Route path="/" element={<UserView portfolioDetails={portfolioDetails} isUserViewActive={isUserViewActive} />} />
             <Route path="/admin" element={<AdminView fetchPortfolioDetails={fetchPortfolioDetails} onRemoveAbout={handleRemoveAbout} handleResumeUpload={handleResumeUpload} portfolioDetails={portfolioDetails} handleImageUpload={handleImageUpload} formData={formData} setFormData={setFormData} handleRemoveImage={handleRemoveImage}/>} />
-            <Route path="/about" element={<AboutView portfolioDetails={portfolioDetails}  image={portfolioDetails.image} />} />
+            <Route path="/about" element={<AboutView portfolioDetails={portfolioDetails}   />} />
 
           </Routes>
         </CSSTransition>

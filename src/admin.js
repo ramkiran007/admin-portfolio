@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button, Form, FormGroup, Label, Input, ListGroup, ListGroupItem } from 'reactstrap';
 
 function AdminView({ handleResumeUpload, handleImageUpload,formData,setFormData, fetchPortfolioDetails, handleRemoveImage ,portfolioDetails}) {
+  console.log('hey admin image'+portfolioDetails.image)
   const navigate = useNavigate();
   
   const [isEditing, setIsEditing] = useState(false);
@@ -105,6 +106,7 @@ const resetForm = () => {
       <FormGroup>
         <Label for="imageUpload">Profile Picture</Label>
         <Input type="file" name="image"  onChange={handleImageUpload} />
+        {console.log("check"+portfolioDetails.image)}
         {portfolioDetails.image && (
           <div>
             <img src={portfolioDetails.image } alt="Profile" style={{ width: '200px', marginTop: '10px' }} />

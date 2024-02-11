@@ -41,7 +41,6 @@ oauth2Client.setCredentials({
           
         },
       });
-  console.log("token bc"+accessToken)
       const mailOptions = {
         from: req.body.email,
         to: process.env.EMAIL_USER, // Where you want to receive the emails

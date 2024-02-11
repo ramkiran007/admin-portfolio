@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const path = require('path');
+const fs = require('fs');
 
 const session = require('express-session');
 const ObjectId = require('mongodb').ObjectId; // Add this line for ObjectId
@@ -21,7 +22,13 @@ const jwtSecret = process.env.JWT_SECRET;
 
 
 app.use('/api/portfolio', portfolioRoutes);
-app.use('/uploads', express.static('uploads'));
+const uploadDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadDir)){
+  fs.mkdirSync(uploadDir);
+}
+
+app.use('/uploads', express.static(uploadDir));
+
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
@@ -48,72 +55,7 @@ mongoose
     console.error("Error connecting to MongoDB:", err);
   });
 
-  /*
-
-  app.post('/api/admin/login', async (req, res) => {
-    const { username, password } = req.body;
-
-    const user = await User.findOne({ username });
-
-    if (!user) {
-        return res.status(401).json({ success: false, message: 'User not found!' });
-    }
-
-    const isPasswordValid = await bcrypt.compare(password, user.password);
-    
-    console.log('Entered password:', password);
-    console.log('Hashed password from DB:', user.password);
-    console.log('Is password valid:', isPasswordValid);
-    bcrypt.compare(password, user.password, function(err, result) {
-        if (err) {
-            console.error("Error while comparing:", err);
-        } else {
-            console.log("Comparison result:", result);
-        }
-    });
-
-    if (isPasswordValid) {
-        const token = jwt.sign({ id: user._id, username: user.username }, 'your_jwt_secret', { expiresIn: '1h' });
-        return res.json({ success: true, token: token });
-    } else {
-        return res.status(401).json({ success: false, message: 'Invalid login credentials' });
-    }
-});
-
-
-
-
-
-app.post('/api/admin/register', async (req, res) => {
-    const { username, password } = req.body;
-
-    // Check if the user already exists
-    const existingUser = await User.findOne({ username });
-    if (existingUser) {
-        return res.status(400).json({ success: false, message: 'Username already exists.' });
-    }
-
-    const user = new User({
-        username: username,
-        password: password // Just save the password directly. Middleware will take care of hashing.
-    });
-
-    try {
-        await user.save();
-        res.json({ success: true });
-    } catch (error) {
-        res.status(500).json({ success: false, message: 'Server error.' });
-    }
-});
-
-
-
-
-// Example protected route
-app.get('/api/protected', authenticate, (req, res) => {
-  res.send('This is a protected route.');
-});
-*/
+  
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
