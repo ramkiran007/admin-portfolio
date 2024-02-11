@@ -8,7 +8,7 @@
     ],
     "routes": [
       {
-        "src": "/api/portfolio/(.*)",
+        "src": "/api/(.*)",
         "dest": "/server/routes/$1"
       }
     ]
