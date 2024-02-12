@@ -6,6 +6,9 @@ const mongoose = require('mongoose');
 const path = require('path');
 const fs = require('fs');
 
+
+
+
 const session = require('express-session');
 const ObjectId = require('mongodb').ObjectId; // Add this line for ObjectId
 const Portfolio=require('./models/portfolio_model')
@@ -40,7 +43,6 @@ methods:["POST","GET"],
 credentials: true}));
 const mongourl =
 "mongodb+srv://cca-medurir2:Ramkiran888@cca-medurir2.kwaur2w.mongodb.net/cca-project-sprint2?retryWrites=true&w=majority";
-
 mongoose
   .connect(mongourl, {
     useNewUrlParser: true,
@@ -58,7 +60,9 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
-const PORT = process.env.PORT || 3005; // Default to 3000 if PORT is not defined
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+const port = process.env.PORT ||3005
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
 });
+
+
