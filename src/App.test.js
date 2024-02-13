@@ -1,5 +1,6 @@
-jest.mock('typewriter-effect', () => () => <div>Typewriter Effect</div>);
-
+jest.mock('lottie-web', () => ({
+    loadAnimation: jest.fn(),
+  }));
   import React from 'react';
 
 import { render, screen } from '@testing-library/react';
