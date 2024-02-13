@@ -109,16 +109,18 @@ Education
             />
         )}
 
-  <div style={{color:'#fafafaa6'}}>
-    {/*<Typewriter
+  {/*<div style={{color:'#fafafaa6'}}>
+    <Typewriter
       options={{loop: true}}
       onInit={(typewriter) => {
         typewriter.typeString('Full Stack Engineer | Software Developer').start();
       }}
     />
-    */}
+    
     <p>Full Stack Engineer | Software Developer</p>
   </div>
+  */}
+  
 
     
      
