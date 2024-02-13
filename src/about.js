@@ -1,4 +1,4 @@
-import React, { useState ,useEffect,useCallback ,Suspense} from 'react';
+import React, { useState ,useCallback ,Suspense} from 'react';
 import { useLocation } from 'react-router-dom';
 import './App.css';
 import Typewriter from 'typewriter-effect';
@@ -13,7 +13,6 @@ const LottieAnimation = React.lazy(() => import('./Constellation'));
 
 function AboutView({ portfolioDetails }) {
   
-  const location = useLocation();
   //const imageUrl = portfolioDetails.image ? portfolioDetails.image:null;
 
   const [currentEducation, setCurrentEducation] = useState(false);

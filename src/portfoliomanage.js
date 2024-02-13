@@ -16,14 +16,10 @@ function PortfolioManager() {
     workExperiences: [],
     about: []
   });
-  const fileInputRef = useRef(null);
-    const [imagePreviewUrl, setImagePreviewUrl] = useState('');
-    const [uploadResponse, setUploadResponse] = useState(null);
   const [isUserViewActive, setIsUserViewActive] = useState(false);
   const [currentTab, setCurrentTab] = useState('home');
   const location = useLocation();
   const [transitionClass, setTransitionClass] = useState('fade-enter');
-  const [imageFile, setImageFile] = useState(null);
 
 
   const [formData, setFormData] = useState({
@@ -47,7 +43,6 @@ function PortfolioManager() {
     setIsUserViewActive(location.pathname === '/');
   }, [location]);
 
-  const [resumeUrl, setResumeUrl] = useState('path/to/resume.pdf');
 
    const fetchPortfolioDetails = async () => {
     try {
@@ -271,9 +266,7 @@ const handleResumeUpload = async (e) => {
 
   
 
-  const handleSetImage = (img) => {
-    setPortfolioDetails(prev => ({ ...prev, image: img }));
-  };
+ 
  
 
   return (
