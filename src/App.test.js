@@ -14,7 +14,6 @@ test('renders App component', async() => {
           <App />
         </MemoryRouter>
       );
-      console.log(screen.debug());
 
   const linkElement = await screen.getByText(/learn react/i);
 
