@@ -1,5 +1,4 @@
 import React, { useState ,useCallback ,Suspense} from 'react';
-import { useLocation } from 'react-router-dom';
 import './App.css';
 import Typewriter from 'typewriter-effect';
 import ContactForm from'./contact'
