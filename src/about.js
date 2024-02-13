@@ -1,6 +1,6 @@
 import React, { useState ,useCallback ,Suspense} from 'react';
 import './App.css';
-//import Typewriter from 'typewriter-effect';
+import Typewriter from 'typewriter-effect';
 import ContactForm from'./contact'
 
 import { useInView } from 'react-intersection-observer';
