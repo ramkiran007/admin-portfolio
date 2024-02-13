@@ -108,7 +108,7 @@ Education
                 style={{ width: '250px', borderRadius: '50%' }}
             />
         )}
-<div style={{color:'#fafafaa6'}}>
+{/*<div style={{color:'#fafafaa6'}}>
       <Typewriter 
       options={{loop: true}}
         onInit={(typewriter) => {
@@ -116,7 +116,7 @@ Education
             .start();
         }}
       />
-    </div>   
+      </div>  */} 
     
      
     </div>
