@@ -1,61 +1,16 @@
 const express = require('express');
 const Portfolio = require('../models/portfolio_model'); // Adjust the path as necessary
-const jwt = require('jsonwebtoken');
 const multer = require('multer');
 const router = express.Router();
-const jwtSecret = process.env.JWT_SECRET;
 const fs = require('fs');
 const path = require('path');
-const { google } = require('googleapis');
-const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
 require('dotenv').config();
 
 
-const emailUser = process.env.EMAIL_USER;
-//const emailPass = process.env.EMAIL_PASS;
 
-const oauth2Client = new google.auth.OAuth2(
-    process.env.CLIENT_ID, // Your Client ID
-    process.env.CLIENT_SECRET, // Your Client Secret
-    "https://developers.google.com/oauthplayground" // Redirect URL
-  );
 
-oauth2Client.setCredentials({
-    refresh_token: process.env.REFRESH_TOKEN // Your Refresh Token
-  });
 
-  async function sendEmail(req, res) {
-    try {
-      const accessToken = await oauth2Client.getAccessToken();
-  
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          type: 'OAuth2',
-          user: process.env.EMAIL_USER, // Your Gmail address
-          clientId: process.env.CLIENT_ID,
-          clientSecret: process.env.CLIENT_SECRET,
-          refreshToken: process.env.REFRESH_TOKEN,
-          accessToken: accessToken, // Note: use accessToken.token for the actual token value
-          
-        },
-      });
-      const mailOptions = {
-        from: req.body.email,
-        to: process.env.EMAIL_USER, // Where you want to receive the emails
-        subject: `New message from ${req.body.name}`,
-        text: req.body.message,
-      };
-  
-      const result = await transporter.sendMail(mailOptions);
-      console.log('Email sent:', result);
-      res.status(200).send('Email sent successfully');
-    } catch (error) {
-      console.error('Error sending email:', error);
-      res.status(500).send('Error sending email');
-    }
-  }
+ 
   
 // Configure multer for file uploads
 const storage = multer.diskStorage({
@@ -76,18 +31,13 @@ const fileFields = upload.fields([
 ]);
 
 // Middleware to authenticate using JWT
-function authenticate(req, res, next) {
-  const authHeader = req.headers.authorization;
-  const token = authHeader && authHeader.split(' ')[1];
 
-  if (token == null) return res.sendStatus(401); // If there's no token
+router.get('/', (req, res) => {
+  const filePath = path.join(__dirname, '../..', 'build/index.html');
+  res.sendFile(filePath);
+});
 
-  jwt.verify(token, jwtSecret, (err, user) => {
-    if (err) return res.sendStatus(403); // If the token is invalid
-    req.user = user;
-    next(); // Proceed to the next middleware
-  });
-}
+console.log(path.join(__dirname, '../..', 'build/index.html'))
 router.get('/items', async (req, res) => {
     try {
       const items = await Portfolio.find();
@@ -98,7 +48,6 @@ router.get('/items', async (req, res) => {
       res.status(500).json({ message: 'Error fetching portfolio items', error });
     }
   });
-  router.post('/send-email', sendEmail )
     
 
 // Add a new portfolio item with optional image and resume upload
