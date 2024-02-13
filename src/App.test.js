@@ -1,3 +1,6 @@
+jest.mock('lottie-web', () => ({
+  loadAnimation: jest.fn(),
+}));
 jest.mock('typewriter-effect', () => () => <div>Typewriter Effect</div>);
 
   import React from 'react';
@@ -14,8 +17,7 @@ test('renders App component', async() => {
         </MemoryRouter>
       );
 
-  const linkElement = await screen.getByText(/learn react/i);
+      const typewriterText = await screen.findByText(/Typewriter Effect/i);
 
-  
-  expect(linkElement).toBeInTheDocument();
+      expect(typewriterText).toBeInTheDocument();
 });
