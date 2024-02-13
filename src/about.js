@@ -117,7 +117,6 @@ Education
       }}
     />
     
-    <p>Full Stack Engineer | Software Developer</p>
   </div>
   
   

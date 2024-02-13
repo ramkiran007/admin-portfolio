@@ -37,7 +37,6 @@ router.get('/', (req, res) => {
   res.sendFile(filePath);
 });
 
-console.log(path.join(__dirname, '../..', 'build/index.html'))
 router.get('/items', async (req, res) => {
     try {
       const items = await Portfolio.find();
