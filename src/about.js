@@ -108,7 +108,7 @@ Education
                 style={{ width: '250px', borderRadius: '50%' }}
             />
         )}
-{process.env.NODE_ENV !== 'test' && (
+
   <div style={{color:'#fafafaa6'}}>
     <Typewriter
       options={{loop: true}}
@@ -117,7 +117,7 @@ Education
       }}
     />
   </div>
-)}
+
     
      
     </div>

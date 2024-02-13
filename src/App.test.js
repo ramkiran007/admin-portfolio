@@ -1,5 +1,5 @@
 // Mocking Typewriter component at the top of the file
-jest.mock('typewriter-effect', () => () => 'Typewriter Mock');
+jest.mock('typewriter-effect', () => () => <div>Typewriter Effect</div>);
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
