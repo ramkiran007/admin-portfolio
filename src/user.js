@@ -1,7 +1,6 @@
 import React, { useState,useEffect,useCallback ,Suspense} from 'react';
 import './App.css';
 import AboutView from './about';
-import Typewriter from "typewriter-effect";
 
 
 import { Element } from 'react-scroll';
@@ -12,20 +11,16 @@ import animationData3 from './Animation - 1705630346032.json'
 import animationData4 from './Animation - 1705708678888-2.json'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useInView } from 'react-intersection-observer';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
 import { styled } from '@mui/material/styles';
 
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { red, grey } from '@mui/material/colors';
 
 
 const LottieAnimation = React.lazy(() => import('./Constellation'));

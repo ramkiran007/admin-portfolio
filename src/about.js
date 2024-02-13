@@ -13,14 +13,11 @@ const LottieAnimation = React.lazy(() => import('./Constellation'));
 
 function AboutView({ portfolioDetails }) {
   
-  const [transitionClass, setTransitionClass] = useState('fade-enter');
   const location = useLocation();
-  const imageUrl = portfolioDetails.image ? portfolioDetails.image:null;
+  //const imageUrl = portfolioDetails.image ? portfolioDetails.image:null;
 
   const [currentEducation, setCurrentEducation] = useState(false);
-  useEffect(() => {
-    setTransitionClass('fade-enter-active');
-  }, [location]);
+ 
 
 
   const toggleEducation = useCallback(() => {
