@@ -1,6 +1,5 @@
-jest.mock('lottie-web', () => ({
-    loadAnimation: jest.fn(),
-  }));
+jest.mock('typewriter-effect', () => () => <div>Typewriter Effect</div>);
+
   import React from 'react';
 
 import { render, screen } from '@testing-library/react';
@@ -14,7 +13,7 @@ test('renders App component', async() => {
           <App />
         </MemoryRouter>
       );
-      
+
   const linkElement = await screen.getByText(/learn react/i);
 
   

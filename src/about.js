@@ -109,7 +109,7 @@ Education
             />
         )}
 
-  {/*<div style={{color:'#fafafaa6'}}>
+  <div style={{color:'#fafafaa6'}}>
     <Typewriter
       options={{loop: true}}
       onInit={(typewriter) => {
@@ -119,7 +119,7 @@ Education
     
     <p>Full Stack Engineer | Software Developer</p>
   </div>
-  */}
+  
   
 
     
