@@ -8,7 +8,7 @@ import AboutView from './about';
 import NavbarComponent from './navbar';
 import Component from './footer';
 
-function PortfolioManager() {
+function App() {
 
   const [portfolioDetails, setPortfolioDetails] = useState({
     image: null,
@@ -287,4 +287,4 @@ const handleResumeUpload = async (e) => {
   );
 }
 
-export default React.memo(PortfolioManager);
+export default React.memo(App);

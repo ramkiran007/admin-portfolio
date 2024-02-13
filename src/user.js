@@ -28,7 +28,7 @@ const LottieAnimation = React.lazy(() => import('./Constellation'));
 
 
 
-// In your PortfolioManager.js or other files where you use these components
+// In your App.js or other files where you use these components
 //import { LottieAnimation, LottieAnimation3,LottieAnimation4} from './Constellation'; // Update the path as necessary
 
 
