@@ -33,7 +33,7 @@ const fileFields = upload.fields([
 // Middleware to authenticate using JWT
 
 router.get('/', (req, res) => {
-  const filePath = path.join(__dirname, '../..', 'build/index.html');
+  const filePath = path.join(__dirname, '../..', 'public/index.html');
   res.sendFile(filePath);
 });
 
