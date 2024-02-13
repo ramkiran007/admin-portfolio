@@ -1,6 +1,6 @@
 import React, { useState ,useCallback ,Suspense} from 'react';
 import './App.css';
-import Typewriter from 'typewriter-effect';
+//import Typewriter from 'typewriter-effect';
 import ContactForm from'./contact'
 
 import { useInView } from 'react-intersection-observer';
@@ -110,12 +110,14 @@ Education
         )}
 
   <div style={{color:'#fafafaa6'}}>
-    <Typewriter
+    {/*<Typewriter
       options={{loop: true}}
       onInit={(typewriter) => {
         typewriter.typeString('Full Stack Engineer | Software Developer').start();
       }}
     />
+    */}
+    <p>Full Stack Engineer | Software Developer</p>
   </div>
 
     
