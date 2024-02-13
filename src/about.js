@@ -108,15 +108,16 @@ Education
                 style={{ width: '250px', borderRadius: '50%' }}
             />
         )}
-{/*<div style={{color:'#fafafaa6'}}>
-      <Typewriter 
+{process.env.NODE_ENV !== 'test' && (
+  <div style={{color:'#fafafaa6'}}>
+    <Typewriter
       options={{loop: true}}
-        onInit={(typewriter) => {
-          typewriter.typeString('Full Stack Engineer | Software Developer')
-            .start();
-        }}
-      />
-      </div>  */} 
+      onInit={(typewriter) => {
+        typewriter.typeString('Full Stack Engineer | Software Developer').start();
+      }}
+    />
+  </div>
+)}
     
      
     </div>
