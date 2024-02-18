@@ -37,7 +37,7 @@ function AdminView({ handleResumeUpload, handleImageUpload,formData,setFormData,
 
   const handleRemove = async (id, type) => {
     try {
-      await fetch(`https://ramkiranmeduri.netlify.app/api/portfolio/remove/${id}`, { method: 'DELETE' });
+      await fetch(`http://ramkiranm.eastus.cloudapp.azure.com/api/portfolio/remove/${id}`, { method: 'DELETE' });
       fetchPortfolioDetails(); // Refresh the list after deletion
     } catch (error) {
       console.error('Error removing portfolio item:', error);
@@ -60,11 +60,10 @@ function AdminView({ handleResumeUpload, handleImageUpload,formData,setFormData,
     if (formData.resume) formDataToSend.append('resume', formData.resume);
 
     const isUpdateOperation = isEditing && editId;
-    let url = isUpdateOperation ? `https://ramkiranmeduri.netlify.app/api/portfolio/update/${editId}` : 'https://ramkiranmeduri.netlify.app/api/portfolio/add';
+    let url = isUpdateOperation ? `http://ramkiranm.eastus.cloudapp.azure.com/api/portfolio/update/${editId}` : 'https://ramkiranmeduri.netlify.app/api/portfolio/add';
     const method = isUpdateOperation ? 'PUT' : 'POST';
 
     try {
-      console.log("seeeeeeee"+formDataToSend)
         const response = await fetch(url, {
             method: method,
             // No headers object needed for FormData; it sets its own Content-Type

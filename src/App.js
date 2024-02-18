@@ -46,7 +46,7 @@ function App() {
 
    const fetchPortfolioDetails = async () => {
     try {
-      const response = await fetch('https://ramkiranmeduri.netlify.app/api/portfolio/items');
+      const response = await fetch('http://ramkiranm.eastus.cloudapp.azure.com/api/portfolio/items');
       if (response.ok) {
         const items = await response.json();
         console.log('all items'+JSON.stringify(items[0]))
@@ -144,7 +144,7 @@ function App() {
     formData.append('image', file); // Adjust 'image' if your API expects a different key
 
     try {
-        const response = await fetch('https://ramkiranmeduri.netlify.app/api/portfolio/add', {
+        const response = await fetch('http://ramkiranm.eastus.cloudapp.azure.com/api/portfolio/add', {
             method: 'POST',
             body: formData, // Send formData directly
             // headers not needed, browser will set Content-Type to multipart/form-data with boundary
@@ -186,7 +186,7 @@ const handleResumeUpload = async (e) => {
   formData.append('resume', file); // Adjust 'resume' if your API expects a different key
 
   try {
-    const response = await fetch('https://ramkiranmeduri.netlify.app/api/portfolio/add', { // Make sure this URL is correct for your API
+    const response = await fetch('http://ramkiranm.eastus.cloudapp.azure.com/api/portfolio/add', { // Make sure this URL is correct for your API
       method: 'POST',
       body: formData, // Send formData directly
       // headers not needed, the browser will set Content-Type to multipart/form-data with boundary
@@ -242,7 +242,7 @@ const handleResumeUpload = async (e) => {
     if (!portfolioDetails.image) return; // Ensure there is an image to remove
 
     try {
-        const response = await fetch('https://ramkiranmeduri.netlify.app/remove-image', {
+        const response = await fetch('http://ramkiranm.eastus.cloudapp.azure.com/remove-image', {
             method: 'POST', // Using POST or DELETE with body, depending on your API design
             headers: {
                 'Content-Type': 'application/json',
