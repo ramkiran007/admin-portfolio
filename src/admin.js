@@ -37,7 +37,7 @@ function AdminView({ handleResumeUpload, handleImageUpload,formData,setFormData,
 
   const handleRemove = async (id, type) => {
     try {
-      await fetch(`/api/portfolio/remove/${id}`, { method: 'DELETE' });
+      await fetch(`https://ramkiranmeduri.netlify.app/api/portfolio/remove/${id}`, { method: 'DELETE' });
       fetchPortfolioDetails(); // Refresh the list after deletion
     } catch (error) {
       console.error('Error removing portfolio item:', error);
@@ -60,7 +60,7 @@ function AdminView({ handleResumeUpload, handleImageUpload,formData,setFormData,
     if (formData.resume) formDataToSend.append('resume', formData.resume);
 
     const isUpdateOperation = isEditing && editId;
-    let url = isUpdateOperation ? `/api/portfolio/update/${editId}` : '/api/portfolio/add';
+    let url = isUpdateOperation ? `https://ramkiranmeduri.netlify.app/api/portfolio/update/${editId}` : 'https://ramkiranmeduri.netlify.app/api/portfolio/add';
     const method = isUpdateOperation ? 'PUT' : 'POST';
 
     try {
