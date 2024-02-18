@@ -9,7 +9,6 @@ const fs = require('fs');
 
 const Portfolio=require('./models/portfolio_model')
 const portfolioRoutes = require('./routes/portfolioRoutes'); // Adjust path as necessary
-require('dotenv').config();
 
 
 const app = express();
