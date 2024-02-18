@@ -39,7 +39,6 @@ router.get('/items', async (req, res) => {
       res.status(500).json({ message: 'Error fetching portfolio items', error });
     }
   });
-  router.post('/send-email', sendEmail )
     
 
 // Add a new portfolio item with optional image and resume upload
