@@ -46,7 +46,7 @@ function App() {
 
    const fetchPortfolioDetails = async () => {
     try {
-      const response = await fetch('http://ramkiranm.eastus.cloudapp.azure.com/api/portfolio/items');
+      const response = await fetch('172.210.27.99/api/portfolio/items');
       if (response.ok) {
         const items = await response.json();
         console.log('all items'+JSON.stringify(items[0]))
@@ -144,7 +144,7 @@ function App() {
     formData.append('image', file); // Adjust 'image' if your API expects a different key
 
     try {
-        const response = await fetch('http://ramkiranm.eastus.cloudapp.azure.com/api/portfolio/add', {
+        const response = await fetch('172.210.27.99/api/portfolio/add', {
             method: 'POST',
             body: formData, // Send formData directly
             // headers not needed, browser will set Content-Type to multipart/form-data with boundary
