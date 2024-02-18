@@ -46,7 +46,7 @@ mongoose
     console.log("Connected to the MongoDB cluster");
   })
   .catch((err) => {
-    console.error("Error connecting to MongoDB:", err);
+    console.error("Errors connecting to MongoDB:", err);
   });
 
   
