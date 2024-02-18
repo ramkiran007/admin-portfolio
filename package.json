@@ -1,5 +1,5 @@
 {
-  "name": "admin-portfolio",
+  "name": "admin-portfolio-backend",
   "version": "1.0.0",
    "main": "server/server.js",
  "scripts": {
