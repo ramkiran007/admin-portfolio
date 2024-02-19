@@ -103,7 +103,7 @@ Education
         {portfolioDetails.image && (
             <img
                 className="profile-image shadow-effect"
-                src={portfolioDetails.image}
+                src="IMG_0002_Original.jpg"
                 alt="Profile"
                 style={{ width: '250px', borderRadius: '50%' }}
             />
