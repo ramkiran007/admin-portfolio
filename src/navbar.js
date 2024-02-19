@@ -3,6 +3,8 @@ import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import { Link as Linkss}  from 'react-scroll';
+import { Link } from 'react-router-dom';
+
 
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -23,14 +25,14 @@ function NavbarComponent({ currentTab, setCurrentTab, portfolioDetails }) {
            <HomeIcon fontSize='small'/> Home
           </Linkss>
         </NavItem>
-{/*
+
         <NavItem>
           <NavLink tag={Link} to="/admin" onClick={() => setCurrentTab('admin')} style={{ fontWeight: 'bold', color: '#ff7700', fontFamily: 'Nunito' }}>
             Admin
           </NavLink>
   
   </NavItem>
-  */}
+  
   
   
   
