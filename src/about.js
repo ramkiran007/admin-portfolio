@@ -2,6 +2,8 @@ import React, { useState ,useCallback ,Suspense} from 'react';
 import './App.css';
 import Typewriter from 'typewriter-effect';
 import ContactForm from'./contact'
+import profileImage from './IMG_0002_Original.jpg'; // Adjust the path as necessary
+
 
 import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap'
@@ -103,7 +105,7 @@ Education
         {portfolioDetails.image && (
             <img
                 className="profile-image shadow-effect"
-                src="IMG_0002_Original.jpg"
+                src={profileImage}
                 alt="Profile"
                 style={{ width: '250px', borderRadius: '50%' }}
             />
