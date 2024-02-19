@@ -34,8 +34,7 @@ app.use(cors({
 methods:["POST","GET"],
 
 credentials: true}));
-const mongourl =
-"mongodb+srv://cca-medurir2:Ramkiran888@cca-medurir2.kwaur2w.mongodb.net/cca-project-sprint2?retryWrites=true&w=majority";
+const mongourl =process.env.MONGODB_URI;
 mongoose
   .connect(mongourl, {
     useNewUrlParser: true,
