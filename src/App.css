@@ -46,6 +46,24 @@ button {
   padding: 10px;
   margin-top: 10px;
 }
+@media (max-width: 768px) {
+  .card-container, .all-projects-container, .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .recipe-card, .project-card, .profile-card, .work-card {
+    max-width: 90%; /* Adjust the width on mobile */
+  }
+  
+  h2, .card-title, .section-title, .projectsection-title {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+  
+  .description-text, .card-body {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+}
 
 @keyframes moveGradient {
   0% {
