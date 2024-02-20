@@ -13,6 +13,7 @@ const portfolioRoutes = require('./routes/portfolioRoutes'); // Adjust path as n
 const app = express();
 app.use(express.json());
 const cors = require('cors');
+require('dotenv').config();
 
 
 
