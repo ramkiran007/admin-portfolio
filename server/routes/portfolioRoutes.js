@@ -5,6 +5,7 @@ const router = express.Router();
 const fs = require('fs');
 const path = require('path');
 const nodemailer = require('nodemailer');
+const NodeCache = require('node-cache');
 
 
 
@@ -32,6 +33,8 @@ const fileFields = upload.fields([
 router.get('/items', async (req, res) => {
     try {
       const items = await Portfolio.find();
+    myCache.set('portfolioItems', items);
+
       console.log('Sending Portfolio Items:', items); // Add this line to log items before sending
 
       res.json(items);
