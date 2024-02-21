@@ -33,7 +33,7 @@ const fileFields = upload.fields([
 router.get('/items', async (req, res) => {
     try {
       const items = await Portfolio.find();
-    myCache.set('portfolioItems', items);
+   // myCache.set('portfolioItems', items);
 
       console.log('Sending Portfolio Items:', items); // Add this line to log items before sending
 
