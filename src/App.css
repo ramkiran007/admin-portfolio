@@ -144,7 +144,7 @@ section {
 
 .card-header, .card-footer {
   padding: 15px;
-  background-color: rgba(156, 25, 173, 0.8);
+  background-color: rgba(173, 25, 25, 0.8);
 }
 
 .experience-title {
@@ -160,7 +160,7 @@ section {
   bottom: -5px; /* Adjust as needed */
   width: 0;
   height: 2px; /* Adjust thickness of the underline */
-  background-color: #cd2ce2; /* Underline color */
+  background-color: #E26A2C; /* Underline color */
   animation: expandUnderline 5.5s ease-in-out infinite;
   transform: translateX(-50% 50%) ;
 }
@@ -499,7 +499,7 @@ section {
 }
 
 .gradient-background {
-  background-image: linear-gradient(to right, #040404, #2b0d26, #5c075c);
+  background-image: linear-gradient(to right, #040404, #3a3a3a, #040404);
   background-size: 200% 100%;
   animation: gradientMotion 6s ease infinite;
   min-height: 100vh;
@@ -530,7 +530,7 @@ section {
 
 
 .description-text {
-  color: #903484;
+  color: #907034;
   font-size: 18px;
   margin-top: 20px;
 }
@@ -710,7 +710,7 @@ body {
 
 
 .gold-motion-gradient {
-    background-image: linear-gradient(to right, rgb(62, 4, 57), #ae00ff, rgb(141, 32, 243));
+    background-image: linear-gradient(to right, rgb(62, 26, 4), #ff6600, rgb(255, 141, 10));
     background-size: 200% 100%;
     color: black !important;
     animation: gradientMotion 6s ease infinite;
