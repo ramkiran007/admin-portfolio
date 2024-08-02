@@ -20,9 +20,9 @@ export default function App() {
 
          <div>
        
-            <p><MDBIcon  icon="envelope" /> ramkiranmeduri.3@gmail.com</p>
+            <p><MDBIcon  icon="envelope" /> meduriramkiran013@gmail.com</p>
             
-            <p><MDBIcon icon="phone" /> +1 937-212-7742</p>
+            <p><MDBIcon icon="phone" /> +1 806-557-0339</p>
           </div>
         <section className='mb-4'>
             
