@@ -9,7 +9,7 @@ import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
-function NavbarComponent({ currentTab, setCurrentTab, portfolioDetails }) {
+  function NavbarComponent({ currentTab, setCurrentTab, portfolioDetails }) {
   
   
   
@@ -41,7 +41,7 @@ function NavbarComponent({ currentTab, setCurrentTab, portfolioDetails }) {
             <PersonIcon fontSize='small'/>About Me
           </Linkss>
         </NavItem>
-       // {portfolioDetails.resume && (
+       {(
           <NavItem>
            <NavLink
       href='https://drive.google.com/file/d/15hgnd0RQp4bVMSTUmaeeU3hgaj7X3DTd/view?usp=sharing'
@@ -52,7 +52,7 @@ function NavbarComponent({ currentTab, setCurrentTab, portfolioDetails }) {
       <FontAwesomeIcon icon={faDownload} /> Resume
     </NavLink>
           </NavItem>
-       // )}
+       )}
       </Nav>
     </Navbar>
   );
