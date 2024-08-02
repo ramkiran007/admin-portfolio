@@ -250,7 +250,6 @@ const Project = React.memo(({ experience })=>{
    <div id="" class="vertical-timeline-element">
     <span class="vertical-timeline-element-icon bounce-in" style="background: rgb(56, 62, 86);">
         <div class="flex justify-center items-center w-full h-full">
-           // <img src="/assets/forces-9f1a3306.png" alt="" class="w-[60%] h-[60%] object-contain">
         </div>
     </span>
     <div class="vertical-timeline-element-content bounce-in" style="background: rgb(29, 24, 54); color: rgb(255, 255, 255);">
@@ -259,7 +258,6 @@ const Project = React.memo(({ experience })=>{
             <h3 class="text-white text-[24px] font-bold">Codeforces</h3>
             <div class="absolute inset-0 flex justify-end m-3 card-img_hover">
                 <div class="bg-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
-                   // <img src="/assets/shre-7b1b5c07.png" alt="source code" class="w-1/2 h-1/2 object-contain">
                 </div>
             </div>
             <p class="text-secondary text-[16px] font-semibold" style="margin: 0px;"></p>
