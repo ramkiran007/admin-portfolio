@@ -101,8 +101,7 @@ Education
 )}
 </div>
 <div className="profile-section fadeInScaleUp">
-{console.log("about check"+portfolioDetails.image)}
-        {portfolioDetails.image && (
+        {(
             <img
                 className="profile-image shadow-effect"
                 src={profileImage}
@@ -115,7 +114,7 @@ Education
     <Typewriter
       options={{loop: true}}
       onInit={(typewriter) => {
-        typewriter.typeString('Full Stack Engineer | Software Developer').start();
+        typewriter.typeString('Data Analyst | Data Scientist').start();
       }}
     />
     
