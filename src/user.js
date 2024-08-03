@@ -2,7 +2,8 @@ import React, { useState,useEffect,useCallback ,Suspense} from 'react';
 import './App.css';
 import AboutView from './about';
 import animation1 from './ihtyN22VL9.json' 
-
+import AOS from 'aos';
+import Heatmap from './login'
 
 import { Element } from 'react-scroll';
 
@@ -52,6 +53,12 @@ function UserView({ portfolioDetails,isUserViewActive }) {
         duration: 800,
         delay: (el, i) => 800 * i
       });
+  }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
   }, []);
 
  
@@ -141,6 +148,7 @@ function RecipeReviewCard({ title, description }) {
   return (
     <div className="gradient-background">
       
+      
     
     <div className="profile-section fadeInScaleUp">
        
@@ -163,14 +171,36 @@ function RecipeReviewCard({ title, description }) {
 
     </div>
 
-   
-   
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '35vh', backgroundColor: 'rgb(240, 240, 240)' }}>
+      <div className="timeline-element center" style={{ width: '60%', position: 'relative' }}>
+       
+        <div className="timeline-element-content bounce-in" style={{ background: 'hsl(185, 77%, 86%)', color: '#334155', padding: '40px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
+          <div className="timeline-element-content-arrow" style={{ display: 'none' }}></div>
+          <div>
+            <h3 className="text-24px font-bold" style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '20px', textAlign: 'center' }}>Introduction</h3>
+            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+              {/* Any additional hover effect */}
+            </div>
+            <p className="text-secondary text-16px font-semibold" style={{ margin: 0, fontSize: '16px', textAlign: 'center' ,color:'#1e293b'}}>Your introduction goes here. You can write about your professional background, skills, and experiences. Make it concise and impactful to leave a good impression.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <br/>
+    
+    <div style={{  height: '250vh', backgroundColor: 'rgb(240, 240, 240)' }}>
+      <br/>
 
-<h2> Work Experience </h2>
+    <div data-aos="fade-up">
+
+<h2 className=" font-bold"> Work Experience </h2>
+</div>
 
 
 
     <div>
+    <div data-aos="fade-up-right" data-aos-duration="3000">
 
     <div className="timeline">
     
@@ -180,7 +210,7 @@ function RecipeReviewCard({ title, description }) {
           
         </div>
     </span>
-    <div className="timeline-element-content bounce-in" style={{ background: 'hsl(185, 77%, 86%)', color: 'black' }}>
+    <div className="timeline-element-content bounce-in" style={{ background: 'hsl(185, 77%, 86%)', color: '#334155' }}>
         <div className="timeline-element-content-arrow" style={{ borderRightWidth: '7px', borderRightStyle: 'solid', borderRightColor: 'rgb(35, 38, 49)' }}></div>
         <div>
             <h3 className="text-24px font-bold" >Cardinal Health</h3>
@@ -189,7 +219,7 @@ function RecipeReviewCard({ title, description }) {
             </div>
             <p className="text-secondary text-16px font-semibold" style={{ margin: 0 }}></p>
         </div>
-        <ul className="mt-5 list-disc ml-5 space-y-2">
+        <ul className="mt-5 list-disc ml-5 space-y-2 ">
         <li className="text-white-100 text-14px pl-1 tracking-wider">Led the design and implementation of a data analysis system to enhance Cardinal Health’s supply chain efficiency and inventory management.</li>
 <li className="text-white-100 text-14px pl-1 tracking-wider">Developed advanced data models and dashboards to provide actionable insights into inventory levels and supply chain operations.</li>
 <li className="text-white-100 text-14px pl-1 tracking-wider">Utilized data-driven strategies to optimize inventory management, reducing operational costs and improving resource allocation.</li>
@@ -201,13 +231,14 @@ function RecipeReviewCard({ title, description }) {
    
     
   </div>
+  </div>
 
   
   
   
 
 </div>
-
+  <div data-aos="fade-up-left" data-aos-duration="3000">
 <div className="timeline">
   <div className="timeline-element right">
     <span className="timeline-element-icon bounce-in" style={{ background: 'rgb(56, 62, 86)' }}>
@@ -215,7 +246,7 @@ function RecipeReviewCard({ title, description }) {
           
         </div>
     </span>
-    <div className="timeline-element-content bounce-in" style={{ background: 'hsl(185, 77%, 86%)', color: 'black' }}>
+    <div className="timeline-element-content bounce-in" style={{ background: 'hsl(185, 77%, 86%)', color: '#334155' }}>
         <div className="timeline-element-content-arrow" style={{ borderRightWidth: '7px', borderRightStyle: 'solid', borderRightColor: 'rgb(35, 38, 49)' }}></div>
         <div>
             <h3 className=" text-24px font-bold">Hcl Tech</h3>
@@ -238,6 +269,7 @@ function RecipeReviewCard({ title, description }) {
   
 
 </div>
+</div>
 
 
 
@@ -245,11 +277,11 @@ function RecipeReviewCard({ title, description }) {
 </div>
 
 
-
-<h2> Education</h2>
-
+<div data-aos="fade-up">
+<h2 className=" font-bold"> Education</h2>
+</div>
     <div>
-
+    <div data-aos="fade-up-right" data-aos-duration="3000">
     <div className="timeline">
   <div className="timeline-element left">
     <span className="timeline-element-icon bounce-in" style={{ background: 'rgb(56, 62, 86)' }}>
@@ -257,17 +289,17 @@ function RecipeReviewCard({ title, description }) {
           
         </div>
     </span>
-    <div className="timeline-element-content bounce-in" style={{ background: 'hsl(185, 77%, 86%)', color: 'black' }}>
+    <div className="timeline-element-content bounce-in" style={{ background: 'hsl(185, 77%, 86%)', color: '#334155' }}>
         <div className="timeline-element-content-arrow" style={{ borderRightWidth: '7px', borderRightStyle: 'solid', borderRightColor: 'rgb(35, 38, 49)' }}></div>
         <div>
             <h3 className=" text-24px font-bold">University of Dayton</h3>
+            <h9 className=" text-4px font-semibold">Masters in Computer Science.</h9>
             <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
                 
             </div>
             <p className="text-secondary text-16px font-semibold" style={{ margin: 0 }}></p>
         </div>
         <ul className="mt-5 list-disc ml-5 space-y-2">
-            <li className="text-white-100 text-14px pl-1 tracking-wider">Codeforces is a great platform for building problem-solving skills and practicing coding questions. It has various language tracks that we can complete to earn stars and showcase our proficiency in that language. I've solved 100+ questions on Codeforces, and it was the first platform I used to start my competitive programming journey. I have the highest rating of 1031.</li>
         </ul>
         <span className="timeline-element-date">August 2022 - May 2024</span>
     </div>
@@ -276,7 +308,8 @@ function RecipeReviewCard({ title, description }) {
   
 
 </div>
-
+</div>
+<div data-aos="fade-up-left" data-aos-duration="3000">
 <div className="timeline">
   <div className="timeline-element right">
     <span className="timeline-element-icon bounce-in" style={{ background: 'rgb(56, 62, 86)' }}>
@@ -284,7 +317,7 @@ function RecipeReviewCard({ title, description }) {
           
         </div>
     </span>
-    <div className="timeline-element-content bounce-in" style={{ background: 'hsl(185, 77%, 86%)', color: 'black' }}>
+    <div className="timeline-element-content bounce-in" style={{ background: 'hsl(185, 77%, 86%)', color: '#334155' }}>
         <div className="timeline-element-content-arrow" style={{ borderRightWidth: '7px', borderRightStyle: 'solid', borderRightColor: 'rgb(35, 38, 49)' }}></div>
         <div>
             <h3 className=" text-24px font-bold">ICFAI Foundation For Higher Education</h3>
@@ -303,12 +336,21 @@ function RecipeReviewCard({ title, description }) {
   
 
 </div>
+</div>
 
 
 
 
 </div>
 
+</div>
+<br/>
+<br/>
+<br/>
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '55vh', backgroundColor: 'rgb(240, 240, 240)' }}>
+
+<Heatmap className="  font-semibold"/>
+</div>
 
 <div>
 <Element name="aboutSection">

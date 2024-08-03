@@ -7,6 +7,9 @@ import AdminView from './admin';
 import AboutView from './about';
 import NavbarComponent from './navbar';
 import Component from './footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 function App() {
 
@@ -16,6 +19,7 @@ function App() {
     workExperiences: [],
     about: []
   });
+  
   const [isUserViewActive, setIsUserViewActive] = useState(false);
   const [currentTab, setCurrentTab] = useState('home');
   const location = useLocation();

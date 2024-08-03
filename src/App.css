@@ -1,3 +1,5 @@
+@import 'aos/dist/aos.css';
+
 .App {
   font-family: Arial, sans-serif;
   height: 100vh;
@@ -43,6 +45,9 @@
   border-radius: 50%;
   z-index: 1;
 }
+.timeline-element.center::after {
+  content: none;
+}
 
 .timeline-element-content {
   padding: 20px 30px;
@@ -76,7 +81,7 @@
   left: 30px;
   border: medium solid white;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent rgb(30, 190, 238);
+  border-color: transparent transparent transparent rgb(18, 107, 122);
 }
 
 .timeline-element.left::before {
@@ -104,11 +109,11 @@
 .timeline-element-content-arrow {
   border-right-width: 7px;
   border-right-style: solid;
-  border-right-color: hsl(185, 90%, 48%);
+  border-right-color: hsl(185, 78%, 29%);
 }
 
 .timeline-element-icon {
-  background: rgb(135, 221, 221);
+  background: rgb(94, 204, 204);
 }
 
 .text-white {
@@ -332,7 +337,7 @@ button {
 
 
 .card {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px rgba(16, 39, 46, 0.2);
   border-radius: 5px;
 }
 
