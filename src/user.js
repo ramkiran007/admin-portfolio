@@ -218,7 +218,7 @@ const Project = React.memo(({ experience })=>{
           onMouseOut={e => gsap.to(e.currentTarget, { scale: 1 })}
           onClick={toggleProject} 
         >
-    /*       
+        
   <h2 className="projectsection-title section-container" style={{ 
       background: 'linear-gradient(to left, #e85d04, rgba(254,127,45,0))', // Gradient to the left
       color: "#000000", 
@@ -245,29 +245,8 @@ const Project = React.memo(({ experience })=>{
 
 
   </h2>
-  */
-           <h2>Projects</h2>
-   <div id="" class="vertical-timeline-element">
-    <span class="vertical-timeline-element-icon bounce-in" style="background: rgb(56, 62, 86);">
-        <div class="flex justify-center items-center w-full h-full">
-        </div>
-    </span>
-    <div class="vertical-timeline-element-content bounce-in" style="background: rgb(29, 24, 54); color: rgb(255, 255, 255);">
-        <div class="vertical-timeline-element-content-arrow" style="border-right-width: 7px; border-right-style: solid; border-right-color: rgb(35, 38, 49);"></div>
-        <div>
-            <h3 class="text-white text-[24px] font-bold">Codeforces</h3>
-            <div class="absolute inset-0 flex justify-end m-3 card-img_hover">
-                <div class="bg-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
-                </div>
-            </div>
-            <p class="text-secondary text-[16px] font-semibold" style="margin: 0px;"></p>
-        </div>
-        <ul class="mt-5 list-disc ml-5 space-y-2">
-            <li class="text-white-100 text-[14px] pl-1 tracking-wider">Codeforces is a great platform for building problem-solving skills and practicing coding questions. It has various language tracks that we can complete to earn stars and showcase our proficiency in that language. I've solved 100+ questions on Codeforces, and it was the first platform I used to start my competitive programming journey. I have the highest rating of 1031.</li>
-        </ul>
-        <span class="vertical-timeline-element-date">March 2022 - present</span>
-    </div>
-</div>
+  
+          
 
   </div>
   {isUserViewActive && (
