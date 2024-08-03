@@ -24,23 +24,7 @@ function AboutView({ portfolioDetails }) {
     setCurrentEducation(prev => !prev);
   }, []);
 
-  const Education = React.memo(({experience })=>{
-    const { ref, inView } = useInView({
-        triggerOnce: true,
-        threshold: 0.5,
-    });
-  
-    return (
-        <div 
-            ref={ref} 
-            className={`education-entry ${inView ? 'project_slide-in-left work_gradient-background' : ''}`}
-        >
-            <h5 className="experience-title " style={{ color: "#E26A2C", fontFamily: 'Nunito',fontSize: '30px'}}>{JSON.parse(JSON.stringify(experience.title))}</h5>
-            <p style={{color:'#fafafaa6'}}>{experience.description}</p>
-        </div>
-        
-    );
-  });
+ 
 
   
 
@@ -48,58 +32,7 @@ function AboutView({ portfolioDetails }) {
       <div>
       
 
-<div className={`education-container slide-in ${currentEducation ? 'currentEducation' : ''}`}>
-<div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-<div  
-      style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', position: 'relative',flexGrow: 1  }} 
-      onMouseOver={e => gsap.to(e.currentTarget, { scale: 1.2 })} 
-      onMouseOut={e => gsap.to(e.currentTarget, { scale: 1 })}
-      onClick={toggleEducation} 
-    >
-<h2 className="section-title section-container" style={{ 
-  background: 'linear-gradient(to left, #e85d04, rgba(254,127,45,0))', // Gradient to the left
-  color: "#000000", 
-  alignItems: "center",
-  justifyContent: "right",
 
-  display:"flex",
-  marginRight: '0px', 
-  padding: '10px 20px', 
-  flexGrow: 0.5,
-  borderTopRightRadius: '20px', // Oval right top corner
-  borderBottomRightRadius: '20px', // Oval right bottom corner
-  borderTopLeftRadius: '5px', // Slightly rounded left top corner
-  borderBottomLeftRadius: '1px', // Slightly rounded left bottom corner
-  whiteSpace: 'nowrap',
-  overflow: 'hidden',
-  fontFamily: 'Nunito',
-  boxShadow: '0 5px 20px 0 rgba(0,0,0,.95)'
-}}>
-Education
-<span className='section-button' style={{ fontSize: '30px', marginRight: '1px',marginLeft:"190px", flexShrink: 0 }}>➜</span>
-
-
-</h2>
-</div>
-
-  <Suspense fallback={<div>Loading animations...</div>}>
-  <LottieAnimation animationData={animationData5} height={300} width={600} />
-  </Suspense>
-
-</div>
-{/* Projects */}
- 
-{currentEducation  &&(
-<div className="education-details ">
-{portfolioDetails.about && portfolioDetails.about.length > 0 && (
-  portfolioDetails.about.map((experience, index) => (
-    <Education key={index} experience={experience} />
-
-  ))
-)}
-</div>
-)}
-</div>
 <div className="profile-section fadeInScaleUp">
         {(
             <img
@@ -110,7 +43,7 @@ Education
             />
         )}
 
-  <div style={{color:'#fafafaa6'}}>
+  <div style={{color:'##0f172a'}}>
     <Typewriter
       options={{loop: true}}
       onInit={(typewriter) => {

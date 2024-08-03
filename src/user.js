@@ -1,14 +1,14 @@
 import React, { useState,useEffect,useCallback ,Suspense} from 'react';
 import './App.css';
 import AboutView from './about';
+import animation1 from './ihtyN22VL9.json' 
 
 
 import { Element } from 'react-scroll';
 
 import gsap from 'gsap'
 import anime from 'animejs';
-import animationData3 from './Animation - 1705630346032.json'
-import animationData4 from './Animation - 1705708678888-2.json'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useInView } from 'react-intersection-observer';
 import Card from '@mui/material/Card';
@@ -40,8 +40,7 @@ function UserView({ portfolioDetails,isUserViewActive }) {
   console.log("Portfolio Details: ", portfolioDetails);
 
 
-  const [currentProject, setCurrentProject] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(false);
+
   useEffect(() => {
     gsap.from(".section-title", { duration: 1, x: -100, opacity: 0 });
     anime.timeline()
@@ -56,30 +55,8 @@ function UserView({ portfolioDetails,isUserViewActive }) {
   }, []);
 
  
-const toggleWorkExperiences = useCallback(() => {
-    setCurrentSlide(prev => !prev);
-  }, []);
-const toggleProject = useCallback(() => {
-    setCurrentProject(prev => !prev);
-  }, []);
-  const WorkExperience=React.memo(({ experience })=>{
-    const { ref, inView } = useInView({
-        triggerOnce: true,
-        threshold: 0.5,
-    });
-                                                     
-    return (
-        <div 
-            ref={ref} 
-            className={`work-experience-entry ${inView ? 'work_slide-in-left-in-left work_gradient-background' : ''}`}
-        >
-        
-            <RecipeReviewCard title={experience.title} description = {experience.description}/>
-           
-        </div>
-    );
-}
-);
+
+
 
 
 // Styled IconButton for expand more action
@@ -157,28 +134,7 @@ function RecipeReviewCard({ title, description }) {
     </div>
   );
 }
-const Project = React.memo(({ experience })=>{
-  const { ref, inView } = useInView({
-      triggerOnce: true,
-      threshold: 0.5,
-  });
 
-  return (
-      <div 
-      
-          ref={ref} 
-          className={`work-experience-entry  ${inView ? 'project_slide-in-left work_gradient-background' : ''}`}
-      >
-          
-          
-          <RecipeReviewCard  title={experience.title} description={experience.description}/>
-          </div>
-          
-        
-
-          
-  );
-});
  
   
   
@@ -207,142 +163,152 @@ const Project = React.memo(({ experience })=>{
 
     </div>
 
-<div>
-<Element name="homeSection">
+   
+   
 
-    <div className={`project-container slide-in ${currentProject ? 'currentProject' : ''}`}>
-    <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-    <div  
-          style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', position: 'relative',flexGrow: 1  }} 
-          onMouseOver={e => gsap.to(e.currentTarget, { scale: 1.2 })} 
-          onMouseOut={e => gsap.to(e.currentTarget, { scale: 1 })}
-          onClick={toggleProject} 
-        >
-        
-  <h2 className="projectsection-title section-container" style={{ 
-      background: 'linear-gradient(to left, #e85d04, rgba(254,127,45,0))', // Gradient to the left
-      color: "#000000", 
-      alignItems: "center",
-      justifyContent: "right",
-
-      display:"flex",
-      marginRight: '0px', 
-      padding: '10px 20px', 
-      flexGrow: 0.5,
-      borderTopRightRadius: '20px', // Oval right top corner
-      borderBottomRightRadius: '20px', // Oval right bottom corner
-      borderTopLeftRadius: '5px', // Slightly rounded left top corner
-      borderBottomLeftRadius: '1px', // Slightly rounded left bottom corner
-      whiteSpace: 'nowrap',
-      overflow: 'hidden',
-      fontFamily: 'Nunito',
-      boxShadow: '0 5px 20px 0 rgba(0,0,0,.95)'
+<h2> Work Experience </h2>
 
 
-  }}>
-    Projects
- <span className='section-button' style={{ fontSize: '30px', marginRight: '1px',marginLeft:"190px", flexShrink: 0 }}>➜</span>
 
+    <div>
 
-  </h2>
-  
+    <div className="timeline">
+    
+  <div className="timeline-element left">
+    <span className="timeline-element-icon bounce-in" style={{ background: 'rgb(56, 62, 86)' }}>
+        <div className="flex justify-center items-center w-full h-full">
           
-
-  </div>
-  {isUserViewActive && (
-  <Suspense fallback={<div>Loading animations...</div>}>
-  <LottieAnimation animationData={animationData4} height={200} width={500} />
-  </Suspense>
-  )}
-</div>
-   {/* Projects */}
-     
-   {currentProject  &&(
-  <div className="project-details ">
-    <div className='card-container'>
-    {portfolioDetails.projects && portfolioDetails.projects.length > 0 && (
-      portfolioDetails.projects.map((experience, index) => (
-
-        <Project key={index} experience={experience} />
-      
-
-      ))
-    )}
-      </div>
-   
-  </div>
-)}
-</div>
-
-
-
-
-
-
-   
-
-      
+        </div>
+    </span>
+    <div className="timeline-element-content bounce-in" style={{ background: 'hsl(185, 77%, 86%)', color: 'black' }}>
+        <div className="timeline-element-content-arrow" style={{ borderRightWidth: '7px', borderRightStyle: 'solid', borderRightColor: 'rgb(35, 38, 49)' }}></div>
+        <div>
+            <h3 className="text-24px font-bold" >Cardinal Health</h3>
+            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
                 
-                <div className={`work-experience-container slide-in ${currentSlide ? 'currentSlide' : ''}`}>
-                <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-                {isUserViewActive && (
-                <Suspense fallback={<div>Loading animations...</div>}>
-        <LottieAnimation animationData={animationData3} height={300} width={700} />
-        </Suspense>
-                )}
-       
-        <div  
-          style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', position: 'relative',flexGrow: 1  }} 
-          onMouseOver={e => gsap.to(e.currentTarget, { scale: 1.2 })} 
-          onMouseOut={e => gsap.to(e.currentTarget, { scale: 1 })}
-          onClick={toggleWorkExperiences} 
-        >
+            </div>
+            <p className="text-secondary text-16px font-semibold" style={{ margin: 0 }}></p>
+        </div>
+        <ul className="mt-5 list-disc ml-5 space-y-2">
+        <li className="text-white-100 text-14px pl-1 tracking-wider">Led the design and implementation of a data analysis system to enhance Cardinal Health’s supply chain efficiency and inventory management.</li>
+<li className="text-white-100 text-14px pl-1 tracking-wider">Developed advanced data models and dashboards to provide actionable insights into inventory levels and supply chain operations.</li>
+<li className="text-white-100 text-14px pl-1 tracking-wider">Utilized data-driven strategies to optimize inventory management, reducing operational costs and improving resource allocation.</li>
+<li className="text-white-100 text-14px pl-1 tracking-wider">Collaborated with supply chain and IT teams to integrate data analysis tools into existing workflows, streamlining processes and enhancing performance.</li>
+<li className="text-white-100 text-14px pl-1 tracking-wider">Monitored key performance metrics and adjusted strategies based on data insights to ensure continuous improvement in supply chain operations.</li>
+        </ul>
+        <span className="timeline-element-date">June 2023 - present</span>
+    </div>
+   
+    
+  </div>
+
+  
+  
+  
+
+</div>
+
+<div className="timeline">
+  <div className="timeline-element right">
+    <span className="timeline-element-icon bounce-in" style={{ background: 'rgb(56, 62, 86)' }}>
+        <div className="flex justify-center items-center w-full h-full">
           
-
-  <h2 className="section-title section-container"  style={{ 
-      backgroundImage: 'linear-gradient(to right,  #e85d04, rgba(254,127,45,0))',
-      
-      color: "black", 
-      marginLeft: '0px', 
-      padding: '10px 20px', 
-      flexGrow: 1,
-      borderTopLeftRadius: '20px', 
-      borderBottomLeftRadius: '20px',
-      borderTopRightRadius: '5px',
-      borderBottomRightRadius: '5px',
-      whiteSpace: 'nowrap',
-      overflow: 'hidden',
-      fontFamily: 'Nunito',
-      boxShadow: '0 5px 20px 0 rgba(0,0,0,.95)'
-
-      
-      
-  }}>
- Work Experience
- <span className='section-button' style={{ fontSize: '30px', marginRight: '190px',marginLeft:"10px", flexShrink: 0 }}>➜</span>
-
-  </h2>
+        </div>
+    </span>
+    <div className="timeline-element-content bounce-in" style={{ background: 'hsl(185, 77%, 86%)', color: 'black' }}>
+        <div className="timeline-element-content-arrow" style={{ borderRightWidth: '7px', borderRightStyle: 'solid', borderRightColor: 'rgb(35, 38, 49)' }}></div>
+        <div>
+            <h3 className=" text-24px font-bold">Hcl Tech</h3>
+            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+                
+            </div>
+            <p className="text-secondary text-16px font-semibold" style={{ margin: 0 }}></p>
+        </div>
+        <ul className="mt-5 list-disc ml-5 space-y-2">
+        <li className="text-white-100 text-14px pl-1 tracking-wider">Managed and executed complex data analytics projects, focusing on improving business intelligence and operational effectiveness for HCL Tech clients.</li>
+<li className="text-white-100 text-14px pl-1 tracking-wider">Designed and developed customized dashboards and reports to deliver actionable insights and support data-driven decision-making.</li>
+<li className="text-white-100 text-14px pl-1 tracking-wider">Analyzed business processes and identified opportunities for optimization, leading to enhanced operational efficiency and strategic outcomes.</li>
+<li className="text-white-100 text-14px pl-1 tracking-wider">Collaborated with stakeholders to tailor data solutions to specific business needs, ensuring alignment with client objectives and requirements.</li>
+<li className="text-white-100 text-14px pl-1 tracking-wider">Provided ongoing support and insights to clients, facilitating the effective use of data tools and driving continuous improvements in business strategies.</li>
+        </ul>
+        <span className="timeline-element-date">June 2019 - August 2022</span>
+    </div>
   </div>
   
   
+
 </div>
 
-{currentSlide &&(
-  <div className="work-experience-details">
-     <div className='card-container'>
-    {portfolioDetails.workExperiences && portfolioDetails.workExperiences.length > 0 && (
-      portfolioDetails.workExperiences.map((experience, index) => (
-        <WorkExperience key={index} experience={experience} />
 
-      ))
-    )}
+
+
+</div>
+
+
+
+<h2> Education</h2>
+
+    <div>
+
+    <div className="timeline">
+  <div className="timeline-element left">
+    <span className="timeline-element-icon bounce-in" style={{ background: 'rgb(56, 62, 86)' }}>
+        <div className="flex justify-center items-center w-full h-full">
+          
+        </div>
+    </span>
+    <div className="timeline-element-content bounce-in" style={{ background: 'hsl(185, 77%, 86%)', color: 'black' }}>
+        <div className="timeline-element-content-arrow" style={{ borderRightWidth: '7px', borderRightStyle: 'solid', borderRightColor: 'rgb(35, 38, 49)' }}></div>
+        <div>
+            <h3 className=" text-24px font-bold">University of Dayton</h3>
+            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+                
+            </div>
+            <p className="text-secondary text-16px font-semibold" style={{ margin: 0 }}></p>
+        </div>
+        <ul className="mt-5 list-disc ml-5 space-y-2">
+            <li className="text-white-100 text-14px pl-1 tracking-wider">Codeforces is a great platform for building problem-solving skills and practicing coding questions. It has various language tracks that we can complete to earn stars and showcase our proficiency in that language. I've solved 100+ questions on Codeforces, and it was the first platform I used to start my competitive programming journey. I have the highest rating of 1031.</li>
+        </ul>
+        <span className="timeline-element-date">August 2022 - May 2024</span>
+    </div>
   </div>
-  </div>
-)}
+  
+  
 
 </div>
-</Element>
+
+<div className="timeline">
+  <div className="timeline-element right">
+    <span className="timeline-element-icon bounce-in" style={{ background: 'rgb(56, 62, 86)' }}>
+        <div className="flex justify-center items-center w-full h-full">
+          
+        </div>
+    </span>
+    <div className="timeline-element-content bounce-in" style={{ background: 'hsl(185, 77%, 86%)', color: 'black' }}>
+        <div className="timeline-element-content-arrow" style={{ borderRightWidth: '7px', borderRightStyle: 'solid', borderRightColor: 'rgb(35, 38, 49)' }}></div>
+        <div>
+            <h3 className=" text-24px font-bold">ICFAI Foundation For Higher Education</h3>
+            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+                
+            </div>
+            <p className="text-secondary text-16px font-semibold" style={{ margin: 0 }}></p>
+        </div>
+        <ul className="mt-5 list-disc ml-5 space-y-2">
+            <li className="text-white-100 text-14px pl-1 tracking-wider">Codeforces is a great platform for building problem-solving skills and practicing coding questions. It has various language tracks that we can complete to earn stars and showcase our proficiency in that language. I've solved 100+ questions on Codeforces, and it was the first platform I used to start my competitive programming journey. I have the highest rating of 1031.</li>
+        </ul>
+        <span className="timeline-element-date">August 2016 - September 2020</span>
+    </div>
+  </div>
+  
+  
+
 </div>
+
+
+
+
+</div>
+
 
 <div>
 <Element name="aboutSection">

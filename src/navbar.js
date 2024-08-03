@@ -9,18 +9,18 @@ import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
-  function NavbarComponent({ currentTab, setCurrentTab, portfolioDetails }) {
+  function NavbarComponent() {
   
   
   
   return (
-    <Navbar dark expand="md" style={{ backgroundImage: 'linear-gradient(to right, #272829, #272829)' }}>
+    <Navbar dark expand="md" style={{ backgroundImage: 'linear-gradient(to right, #272829, #4fe3e8)' }}>
       <NavbarBrand href="#" className="gold-motion-gradient" style={{ fontFamily: 'Nunito' }}>
         RKM
       </NavbarBrand>
       <Nav className="ml-auto" navbar>
         <NavItem>
-        <Linkss to="homeSection" spy={true} smooth={true} duration={500} className="nav-link" style={{ fontWeight: 'bold', color: '#ff7700', fontFamily: 'Nunito' }}>
+        <Linkss to="homeSection" spy={true} smooth={true} duration={500} className="nav-link" style={{ fontWeight: 'bold', color: '#0f172a', fontFamily: 'Nunito' }}>
            <HomeIcon fontSize='small'/> Home
           </Linkss>
         </NavItem>
@@ -37,7 +37,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
   
   
   <NavItem>
-        <Linkss to="aboutSection" spy={true} smooth={true} duration={500} className="nav-link" style={{ fontWeight: 'bold', color: '#ff7700', fontFamily: 'Nunito' }}>
+        <Linkss to="aboutSection" spy={true} smooth={true} duration={500} className="nav-link" style={{ fontWeight: 'bold', color: '#0f172a', fontFamily: 'Nunito' }}>
             <PersonIcon fontSize='small'/>About Me
           </Linkss>
         </NavItem>
@@ -46,7 +46,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
            <NavLink
       href='https://drive.google.com/file/d/15hgnd0RQp4bVMSTUmaeeU3hgaj7X3DTd/view?usp=sharing'
       
-      style={{ fontWeight: 'bold', color: '#ff7700', fontFamily: 'Nunito', textDecoration: 'none', padding: ' 0.5rem 1rem' }}
+      style={{ fontWeight: 'bold', color: '#0f172a', fontFamily: 'Nunito', textDecoration: 'none', padding: ' 0.5rem 1rem' }}
       // Add any additional styling to match NavLink
     >
       <FontAwesomeIcon icon={faDownload} /> Resume

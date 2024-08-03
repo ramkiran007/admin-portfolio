@@ -39,9 +39,9 @@ function ContactForm() {
     >
               <Toaster position="top-center" reverseOrder={false} />
 
-      <Card sx={{ maxWidth: 600, mx: 'auto', mt: 5, padding: 3, backgroundColor: '#1a1a1a', color: '#fff' }}>
+      <Card sx={{ maxWidth: 600, mx: 'auto', mt: 5, padding: 3, backgroundColor: '#4b595c', color: '#fff' }}>
         <CardContent>
-          <Typography variant="h5" component="div" gutterBottom sx={{ color: '#d86620cb', textAlign: 'center' }}>
+          <Typography variant="h5" component="div" gutterBottom sx={{ color: 'white', textAlign: 'center' }}>
             Get in Touch
           </Typography>
           <form onSubmit={handleSubmit} noValidate autoComplete="off">
