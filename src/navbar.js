@@ -3,7 +3,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import { Link as Linkss}  from 'react-scroll';
-import resume from '/home/ramkiranmeduri_3/admin-portfolio/src/uploads/Ram kiran Meduri_Data_analyst.pdf'
+import resume from './uploads/Ram kiran Meduri_Data_analyst.pdf'
 
 
 import './App.css';

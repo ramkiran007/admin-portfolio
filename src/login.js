@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import profiles from './uploads/pexels-puwadon-sang-ngern-2168173-5340280.jpg'
 import icon from './uploads/upload.png'
-import pdf from '/home/ramkiranmeduri_3/admin-portfolio/src/uploads/CancerDiagnosis.pdf'
+import pdf from './uploads/CancerDiagnosis.pdf'
 const PortfolioCard = () => {
   return (
     <div className="card">
