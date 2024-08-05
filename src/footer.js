@@ -81,7 +81,6 @@ export default function App() {
           
 
         </section>
-        <Link to="aboutSection" className="footer-links">About</Link>
         </div>
       </MDBContainer>
      
