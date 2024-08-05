@@ -112,10 +112,10 @@ My expertise lies in leveraging SQL, Python, and R to extract, analyze, and mode
           icon={<img src="https://static.stocktitan.net/company-logo/cah-lg.webp" alt="Cardinal Health Logo" style={{ width: '60px', height: '60px', borderRadius: '50%' }} />}
           iconStyle={{ background: 'black', boxShadow: 'none' }} // Remove default styling if needed
         
-          contentStyle={{ background: 'rgb(197, 47, 33)', color: '#F2F0EC' ,borderRadius: '10px', textAlign:'center'}}
+          contentStyle={{ background: 'rgb(197, 47, 33)', color: '#F2F0EC' ,borderRadius: '10px'}}
         >
           <h3 className="text-24px font-bold">Cardinal Health</h3>
-          <ul className="ullist mt-5 list-disc space-y-2" style={{textAlign:'center'}}>
+          <ul className="mt-5 list-disc space-y-2" >
             <li className="text-white-100 text-14px pl-1 tracking-wider">Led the design and implementation of a data analysis system to enhance Cardinal Health’s supply chain efficiency and inventory management.</li>
             <li className="text-white-100 text-14px pl-1 tracking-wider">Developed advanced data models and dashboards to provide actionable insights into inventory levels and supply chain operations.</li>
             <li className="text-white-100 text-14px pl-1 tracking-wider">Utilized data-driven strategies to optimize inventory management, reducing operational costs and improving resource allocation.</li>
