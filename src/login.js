@@ -23,8 +23,8 @@ const PortfolioCard = () => {
       <div className="carder-content">
         <p className="carder-title">Cancer diagnosis</p>
         <p className="card-description">
-          Designed and developed a portfolio website using React. Utilized responsive design to ensure the website looks good on different devices and screen sizes. Ensured responsive design for optimal user experience.
-        </p>
+
+        The Cancer Diagnosis project uses data from the Memorial Sloan Kettering Cancer Center to classify genetic mutations via machine learning models. It involves preprocessing, analysis, and model evaluation to improve cancer mutation classification and treatment.          </p>
         
       </div>
     </div>

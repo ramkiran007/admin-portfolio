@@ -44,16 +44,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
         </NavItem>
        {(
           <NavItem>
-            {/* <NavLink
-  to={resume} // Path to your PDF file
-  className="nav-link" 
-  style={{ fontWeight: 'bold', color: '#F1F1F1', fontFamily: 'Nunito', textDecoration: 'none', padding: '0.5rem 1rem' }}
-  target="_blank" // Opens the link in a new tab
-  rel="noopener noreferrer" // Security feature for opening new tabs
->
-
-  <FontAwesomeIcon icon={faDownload} /> Resume
-</NavLink> */}
+            
            <NavLink
       href={resume}
       
