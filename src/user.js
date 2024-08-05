@@ -112,10 +112,10 @@ My expertise lies in leveraging SQL, Python, and R to extract, analyze, and mode
           icon={<img src="https://static.stocktitan.net/company-logo/cah-lg.webp" alt="Cardinal Health Logo" style={{ width: '60px', height: '60px', borderRadius: '50%' }} />}
           iconStyle={{ background: 'black', boxShadow: 'none' }} // Remove default styling if needed
         
-          contentStyle={{ background: 'rgb(197, 47, 33)', color: '#F2F0EC' ,borderRadius: '10%'}}
+          contentStyle={{ background: 'rgb(197, 47, 33)', color: '#F2F0EC' ,borderRadius: '10px', textAlign:'center'}}
         >
           <h3 className="text-24px font-bold">Cardinal Health</h3>
-          <ul className="mt-5 list-disc ml-5 space-y-2">
+          <ul className="ullist mt-5 list-disc space-y-2" style={{textAlign:'center'}}>
             <li className="text-white-100 text-14px pl-1 tracking-wider">Led the design and implementation of a data analysis system to enhance Cardinal Health’s supply chain efficiency and inventory management.</li>
             <li className="text-white-100 text-14px pl-1 tracking-wider">Developed advanced data models and dashboards to provide actionable insights into inventory levels and supply chain operations.</li>
             <li className="text-white-100 text-14px pl-1 tracking-wider">Utilized data-driven strategies to optimize inventory management, reducing operational costs and improving resource allocation.</li>
@@ -131,10 +131,10 @@ My expertise lies in leveraging SQL, Python, and R to extract, analyze, and mode
           icon={<img src="https://www.financialexpress.com/wp-content/uploads/2022/09/hcl1.jpg" alt="Hcl Tech Logo" style={{ width: '60px', height: '60px', borderRadius: '50%' }} />}
 
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          contentStyle={{ background: 'rgb(82, 78, 210)', color: '#F2F0EC', borderRadius: '10%'}}
+          contentStyle={{ background: 'rgb(82, 78, 210)', color: '#F2F0EC', borderRadius: '10px'}}
         >
           <h3 className="text-24px font-bold">HCL Tech</h3>
-          <ul className="mt-5 list-disc ml-5 space-y-2">
+          <ul className="mt-5 list-disc  space-y-2">
             <li className="text-white-100 text-14px pl-1 tracking-wider">Managed and executed complex data analytics projects, focusing on improving business intelligence and operational effectiveness for HCL Tech clients.</li>
             <li className="text-white-100 text-14px pl-1 tracking-wider">Designed and developed customized dashboards and reports to deliver actionable insights and support data-driven decision-making.</li>
             <li className="text-white-100 text-14px pl-1 tracking-wider">Analyzed business processes and identified opportunities for optimization, leading to enhanced operational efficiency and strategic outcomes.</li>
