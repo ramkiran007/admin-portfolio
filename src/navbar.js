@@ -45,10 +45,11 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
        {(
           <NavItem>
             
+
            <NavLink
       href={resume}
       
-      className="nav-link" style={{ fontWeight: 'bold', color: '#F1F1F1', fontFamily: 'Nunito', textDecoration: 'none', padding: ' 0.5rem 1rem' }}
+      className="nav-link" style={{ fontWeight: 'bold', color: '#F1F1F1', fontFamily: 'Nunito', textDecoration: 'none' }}
       // Add any additional styling to match NavLink
     >
       <FontAwesomeIcon icon={faDownload} /> Resume
