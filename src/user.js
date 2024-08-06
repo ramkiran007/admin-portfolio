@@ -125,7 +125,6 @@ My expertise lies in leveraging SQL, Python, and R to extract, analyze, and mode
           </ul>
         </VerticalTimelineElement>
         </div>
-        <div data-aos="fade-up" data-aos-duration="2000">
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           
@@ -144,13 +143,9 @@ My expertise lies in leveraging SQL, Python, and R to extract, analyze, and mode
             <li className="text-white-100 text-14px pl-1 tracking-wider">Provided ongoing support and insights to clients, facilitating the effective use of data tools and driving continuous improvements in business strategies.</li>
           </ul>
         </VerticalTimelineElement>
-        </div>
         <br/>
       
-        <div data-aos="fade-up" data-aos-duration="2000">
           <h2 className="font-bold">Education</h2>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="2000">
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           
@@ -163,8 +158,6 @@ My expertise lies in leveraging SQL, Python, and R to extract, analyze, and mode
           <h3 className="text-24px font-bold">University of Dayton</h3>
           <p className="text-white-100 text-14px pl-1 tracking-wider" style={{textAlign:'center'}}>Masters in Computer Science</p>
         </VerticalTimelineElement>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="2000">
 
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
@@ -178,7 +171,6 @@ My expertise lies in leveraging SQL, Python, and R to extract, analyze, and mode
           <h3 className="text-24px font-bold">ICFAI Foundation For Higher Education</h3>
           <p className="text-white-100 text-14px pl-1 tracking-wider" style={{textAlign:'center'}}>Bachelor's in Computer Science</p>
         </VerticalTimelineElement>
-        </div>
       </VerticalTimeline>
     </div>
    

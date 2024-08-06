@@ -35,12 +35,14 @@ function AboutView({ portfolioDetails }) {
 
 <div className="profile-section fadeInScaleUp">
         {(
+            <div style={{ textAlign: 'center' }}>
             <img
                 className="profile-image shadow-effect"
                 src={profileImage}
                 alt="Profile"
-                style={{ width: '250px', borderRadius: '50%' }}
+                style={{ width: '250px', borderRadius: '50%', display: 'block', margin: 'auto' }}
             />
+        </div>
         )}
 
   <div style={{color:'##0f172a'}}>
