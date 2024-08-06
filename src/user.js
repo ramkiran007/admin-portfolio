@@ -74,7 +74,7 @@ function UserView({ portfolioDetails,isUserViewActive }) {
       <h1 className="intro-heading" data-aos="fade-up"
         data-aos-duration="1000">Hi, I am Ram</h1>
       <p 
-        data-aos="fade-up"
+        data-aos="fade-up "
         data-aos-duration="2500"
         className="intro-text"
         style={{ color:'#6A6A6A',fontSize: '16px', fontWeight: 'bold', marginTop: '5rem', marginBottom: '0' }}
@@ -100,11 +100,12 @@ My expertise lies in leveraging SQL, Python, and R to extract, analyze, and mode
 
 
       <br />
-      <div data-aos="fade-up">
+      <div data-aos="fade-up" data-aos-duration="2000">
         <h2 className="font-bold" style={{marginTop:'4rem'}}>Work Experience</h2>
       </div>
 
       <VerticalTimeline>
+      <div data-aos="fade-up" data-aos-duration="2000">
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           
@@ -123,7 +124,8 @@ My expertise lies in leveraging SQL, Python, and R to extract, analyze, and mode
             <li className="text-white-100 text-14px pl-1 tracking-wider">Monitored key performance metrics and adjusted strategies based on data insights to ensure continuous improvement in supply chain operations.</li>
           </ul>
         </VerticalTimelineElement>
-
+        </div>
+        <div data-aos="fade-up" data-aos-duration="2000">
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           
@@ -142,12 +144,13 @@ My expertise lies in leveraging SQL, Python, and R to extract, analyze, and mode
             <li className="text-white-100 text-14px pl-1 tracking-wider">Provided ongoing support and insights to clients, facilitating the effective use of data tools and driving continuous improvements in business strategies.</li>
           </ul>
         </VerticalTimelineElement>
+        </div>
         <br/>
       
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-duration="2000">
           <h2 className="font-bold">Education</h2>
         </div>
-
+        <div data-aos="fade-up" data-aos-duration="2000">
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           
@@ -160,6 +163,8 @@ My expertise lies in leveraging SQL, Python, and R to extract, analyze, and mode
           <h3 className="text-24px font-bold">University of Dayton</h3>
           <p className="text-white-100 text-14px pl-1 tracking-wider" style={{textAlign:'center'}}>Masters in Computer Science</p>
         </VerticalTimelineElement>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="2000">
 
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
@@ -173,6 +178,7 @@ My expertise lies in leveraging SQL, Python, and R to extract, analyze, and mode
           <h3 className="text-24px font-bold">ICFAI Foundation For Higher Education</h3>
           <p className="text-white-100 text-14px pl-1 tracking-wider" style={{textAlign:'center'}}>Bachelor's in Computer Science</p>
         </VerticalTimelineElement>
+        </div>
       </VerticalTimeline>
     </div>
    
@@ -182,12 +188,17 @@ My expertise lies in leveraging SQL, Python, and R to extract, analyze, and mode
 <br/>
 <br/>
 <br/>
+<div data-aos="fade-up" data-aos-duration="3000">
 <div className='project-heading'><h1 className="font-bold" >Projects</h1></div>
+<br/>
+<br/>
 <div className='project-section'>
 <PortfolioCard/>
-
 </div>
 
+</div>
+<br/>
+<br/>
 <div>
 <Element name="aboutSection">
 

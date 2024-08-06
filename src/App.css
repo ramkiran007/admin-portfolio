@@ -186,7 +186,7 @@ button {
   position: relative;
   margin: 0;
   padding: 1rem;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b, #fab885, #f6ba8d, #b1896b, #b0886a); /* Gradient text background */
+  background: linear-gradient(135deg, #ff7e5f, #feb47b, #fab885, #f6ba8d, #c5916a, #e9a877); /* Gradient text background */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
