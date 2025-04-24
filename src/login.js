@@ -48,12 +48,12 @@ const PortfolioCard = () => {
        
       </div>
       <div className="carder-content">
-        <p className="carder-title">Cancer diagnosis</p>
+        <p className="carder-title">Airline Analysis</p>
         <p className="card-description">
 
 This report analyzes domestic flight data from Q1 2019 to identify the best round-trip
 routes for a new airline entering the US market. The company plans to launch 5 routes
-using new airplanes that cost $90 million each, with a brand promise of --On time, for you.       
+using new airplanes that cost $90 million each, with a brand promise of --On time, for you.  </p>      
       </div>
     </div>
 
