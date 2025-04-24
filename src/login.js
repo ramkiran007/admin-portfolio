@@ -31,7 +31,6 @@ const PortfolioCard = () => {
         The Cancer Diagnosis project uses data from the Memorial Sloan Kettering Cancer Center to classify genetic mutations via machine learning models. It involves preprocessing, analysis, and model evaluation to improve cancer mutation classification and treatment.          </p>
         
       </div>
-    </div>
 
       <div className="carder-image-container">
         <img
@@ -57,7 +56,7 @@ routes for a new airline entering the US market. The company plans to launch 5 r
 using new airplanes that cost $90 million each, with a brand promise of --On time, for you.       
       </div>
     </div>
-</div>
+
 
   );
 };
