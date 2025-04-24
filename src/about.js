@@ -49,7 +49,7 @@ function AboutView({ portfolioDetails }) {
     <Typewriter
       options={{loop: true}}
       onInit={(typewriter) => {
-        typewriter.typeString('Data Analyst | Data Scientist').start();
+        typewriter.typeString('Data Analyst | Data Scientist | Data Engineer').start();
       }}
     />
     
