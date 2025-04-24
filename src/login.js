@@ -23,7 +23,7 @@ const PortfolioCard = () => {
 
 
        
-      </div>
+    
       <div className="carder-content">
         <p className="carder-title">Cancer diagnosis</p>
         <p className="card-description">
@@ -33,7 +33,6 @@ const PortfolioCard = () => {
       </div>
     </div>
 
-<div className="card">
       <div className="carder-image-container">
         <img
           src={profiles}
@@ -44,7 +43,6 @@ const PortfolioCard = () => {
   <a href={pdf2} target="_blank" rel="noopener noreferrer" style={{ display: 'block', width: '100%', height: '100%' }}>
     {/* Additional content can go here if needed */}
   </a>
-</div>
 
 
 
@@ -59,6 +57,7 @@ routes for a new airline entering the US market. The company plans to launch 5 r
 using new airplanes that cost $90 million each, with a brand promise of --On time, for you.       
       </div>
     </div>
+</div>
 
   );
 };
