@@ -56,7 +56,7 @@ const PortfolioCard = () => {
 
 This report analyzes domestic flight data from Q1 2019 to identify the best round-trip
 routes for a new airline entering the US market. The company plans to launch 5 routes
-using new airplanes that cost $90 million each, with a brand promise of "On time, for you."       
+using new airplanes that cost $90 million each, with a brand promise of --On time, for you.       
       </div>
     </div>
 
