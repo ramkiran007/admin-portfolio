@@ -6,8 +6,9 @@ import pdf from './uploads/CancerDiagnosis.pdf'
 import pdf2 from './uploads/Airline Analysis.pdf'
 
 const PortfolioCard = () => {
-  return (
+  return (  
     <div className="card">
+    
       <div className="carder-image-container">
         <img
           src={profiles}
@@ -28,33 +29,13 @@ const PortfolioCard = () => {
         <p className="carder-title">Cancer diagnosis</p>
         <p className="card-description">
 
-        The Cancer Diagnosis project uses data from the Memorial Sloan Kettering Cancer Center to classify genetic mutations via machine learning models. It involves preprocessing, analysis, and model evaluation to improve cancer mutation classification and treatment.          </p>
+        The Cancer Diagnosis project uses data from the Memorial Sloan Kettering Cancer 
+  Center to classify genetic mutations via machine learning models. It involves preprocessing, analysis, 
+    and model evaluation to improve cancer mutation classification and treatment.          </p>
         
       </div>
 
-      <div className="carder-image-container">
-        <img
-          src={profiles}
-          alt="project_image"
-          className="card-image"
-        />
-<div className="card-hover">
-  <a href={pdf2} target="_blank" rel="noopener noreferrer" style={{ display: 'block', width: '100%', height: '100%' }}>
-    {/* Additional content can go here if needed */}
-  </a>
-
-
-
-       
-      </div>
-      <div className="carder-content">
-        <p className="carder-title">Airline Analysis</p>
-        <p className="card-description">
-
-This report analyzes domestic flight data from Q1 2019 to identify the best round-trip
-routes for a new airline entering the US market. The company plans to launch 5 routes
-using new airplanes that cost $90 million each, with a brand promise of --On time, for you.  </p>      
-      </div>
+  
     </div>
 
 
