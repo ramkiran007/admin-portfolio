@@ -34,9 +34,9 @@ const PortfolioCard = () => {
     and model evaluation to improve cancer mutation classification and treatment.          </p>
         
       </div>
-    </div>
+    
 
-      <div className="carder-image-container">
+
         <img
           src={profiles}
           alt="project_image"
