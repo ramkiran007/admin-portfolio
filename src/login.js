@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import profiles from './uploads/pexels-puwadon-sang-ngern-2168173-5340280.jpg'
+import profiles2 from './uploads/pexels-samography-814718-1687633.jpg'
 import icon from './uploads/upload.png'
 import pdf from './uploads/CancerDiagnosis.pdf'
 import pdf2 from './uploads/Airline Analysis.pdf'
@@ -37,7 +38,7 @@ const PortfolioCard = () => {
       <div className="card">
         <div className="carder-image-container">
           <img
-            src={profiles}
+            src={profiles2}
             alt="project_image"
             className="card-image"
           />
